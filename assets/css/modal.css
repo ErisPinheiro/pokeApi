@@ -1,0 +1,203 @@
+
+
+.modalOpen {
+  
+    color: #FFF;
+    padding-top: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 0;
+    
+    
+}
+
+.modalOpen::backdrop {
+    background: grey;
+    opacity: .4;
+    
+}
+
+.modalColor {
+
+    padding: 0;
+    margin: 0;
+    border-radius: 1rem;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+ }
+
+ .control img{
+    cursor: pointer;
+ }
+
+
+
+.modalPokeData {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+  }
+
+
+.modalPokeData ol {
+    padding: 0;
+  }
+ 
+ .modalPokeData span {
+    display: inline;
+    justify-content: space-between;
+ 
+ }
+ 
+ .modalPokeData .types li {
+    display: inline;
+    padding-left: .5rem;
+    list-style: none;
+ 
+ 
+ }
+
+
+header {
+    position: relative;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+ 
+ .pokephoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+
+ }
+
+ .pokephoto img {
+    align-items: center;
+    max-width: 20rem;
+    max-height: 20rem;
+    
+ }
+ 
+ .detailbody {
+    color: gray;
+    padding-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 100%;
+ 
+ 
+ }
+ 
+ .detail .detailbody .base-stats table {
+    padding: 1rem;
+    color: #494545;
+    
+ }
+
+ .detail .detailbody .base-stats table td:nth-child(n+2) {
+    padding-left: 1rem;
+    font-weight: bold;
+    
+ }
+
+
+ 
+ 
+ .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ .nav li {
+    display: inline;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+ }
+
+ .nav li a {
+    text-decoration: none;
+ }
+ 
+ 
+
+.detail ol, ul {
+    padding-left: 1rem;
+    list-style: none;
+
+}
+
+.base-stats {
+    font: bold;
+    color: grey;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction:column ;
+}
+
+.base-stats ul li {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+.base-stats span:nth-child(2) {
+    padding-left: .5rem;
+    color: #000;
+}
+
+
+
+
+dd{
+    display: flex; 
+    align-items: center;
+    padding-top: .5rem;
+
+
+  }
+
+
+.progress-bar {
+
+    box-sizing: border-box;
+    background-color: #e6ff09;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    width: 15rem;
+    max-width: 90%;
+    height: .5rem;
+
+    
+
+}
+
+.progress-bar::-webkit-progress-bar,
+.progress-bar::-moz-progress-bar{
+    background-color: #13d136;
+}
+
