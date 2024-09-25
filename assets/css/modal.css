@@ -77,6 +77,14 @@ header {
     justify-content: space-between;
     
  }
+
+ .pokemon {
+   transition: box-shadow 0.3s ease;
+ }
+
+ .pokemon:hover {
+   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+ }
  
  .pokephoto {
     display: flex;

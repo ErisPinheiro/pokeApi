@@ -29,17 +29,20 @@
         </div>
 
          <!-- Campo de busca -->
-        <input type="text" id="searchInput" placeholder=" Nome " />
-        
-        <!-- Botão de Filtrar Favoritos -->
-        <button type="button" id="FavoritesButton" class="btn btn-outline-secondary btn-sm">
-            Mostrar Favoritos
-        </button>
-        
-        <!-- Botão de Mostrar Todos -->
-        <button type="button" id="AllButton" class="btn btn-outline-secondary btn-sm">
-            Mostrar Todos
-        </button>
+
+        <nav class="navbar bg-body-tertiary bg-">
+            <div class="container-fluid">
+                <!-- Botão de Mostrar Todos -->
+                <button type="button" id="AllButton" class="btn btn-outline-success btn-sm">Mostrar Todos</button>
+                <!-- Botão de Filtrar Favoritos -->
+                <button type="button" id="FavoritesButton" class="btn btn-outline-secondary btn-sm">Mostrar Favoritos</button>
+
+              <form class="d-flex" role="search">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar Pokémon" aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+            </div>
+          </nav>
 
         <ol id="pokemonList" class="pokemons">
             <!--........ Pokemons here.........-->

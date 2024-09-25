@@ -2,7 +2,9 @@ const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 const favoritesButton = document.getElementById('FavoritesButton');
 const showAllButton = document.getElementById('AllButton');
+
 const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
 
 const maxRecords = 151;
 const limit = 12;
@@ -96,14 +98,8 @@ async function showFavoritePokemons() {
   // Iterar sobre os IDs dos Pokémon favoritados
   for (let i = 0; i < favoriteIds.length; i++) {
     const pokemonId = favoriteIds[i];
-
-    // Buscar os detalhes de cada Pokémon
     const pokemonDetail = await getPokemonDetailById(pokemonId);
-
-    // Criar o item na lista de Pokémon
     const pokemonElement = createPokemonListItem(pokemonDetail);
-
-    // Adicionar o item à lista de Pokémon
     document.getElementById('pokemonList').appendChild(pokemonElement);
   }
 }
@@ -234,3 +230,28 @@ function updateFavoriteButton(pokemonId) {
     favoriteButton.src = './assets/icon/heart.svg';
   }
 }
+
+searchButton.addEventListener('click', async function (event) {
+  event.preventDefault(); 
+
+  const pokemonName = searchInput.value.trim().toLowerCase();
+
+  if (pokemonName) {
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+      if (!response.ok) {
+        throw new Error('Pokémon não encontrado!');
+      }
+
+      const pokemonData = await response.json();
+
+      // Abre o modal com os dados do Pokémon encontrado
+      loadAndPopulateModal(pokemonData.id);
+      modalPokemon.showModal();
+      
+    } catch (error) {
+      console.error("Erro na busca do Pokémon:", error);
+      alert('Pokémon não encontrado!');
+    }
+  }
+});

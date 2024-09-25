@@ -19,11 +19,14 @@ body {
 }
 
 .home h1 {
-    
+
     font-weight: bold;
 
 }
 
+.navbar {
+    background-color: #90EE90;
+}
 
 .content {
     width: 100vw;

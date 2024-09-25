@@ -103,30 +103,3 @@ buttonClose.onclick = function () {
 
 
 
-
-
-// pokemonList.onclick = function (event) {const pokemonNumber = event.target.closest('.pokemon').querySelector('.number').textContent.replace('#', '');     loadAndPopulateModal(pokemonNumber);     modalOpen.showModal(); }
-// function loadAndPopulateModal(pokemonNumber) {
-    //     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}/`)
-    //         .then(response => response.json())
-    //         .then(data => {
-        //             populateModal(data);
-        //             console.log(data.types[0].type.name)
-        //         })
-        //         .catch(error => {
-            //             console.error('Erro ao carregar dados da API:', error);
-            //         });
-            // }   
-            
-            
-            
-            // const openModal = document.querySelector(".open-button");
-            // const closeModal = document.querySelector(".close-button");
-            
-            // openModal.addEventListener('click', () => {
-            //     modal.showModal();
-            // })
-            
-            // closeModal.addEventListener('click', () => {
-            //   modal.close()
-            // })
