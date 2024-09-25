@@ -8,6 +8,21 @@ body {
     background-color: #F6F8FC;
 }
 
+.home {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.home h1 {
+    
+    font-weight: bold;
+
+}
 
 
 .content {

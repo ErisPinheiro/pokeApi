@@ -23,13 +23,22 @@
 <body>
 
     <section class="content">
-        <h1>Pokedex</h1>
+        <div class="home">
+            <img src="./assets/img/PokemonLogo.svg" alt="PokemonLogo">
+            <h1>Pokedex</h1>
+        </div>
+
          <!-- Campo de busca -->
         <input type="text" id="searchInput" placeholder=" Nome " />
-
+        
         <!-- Botão de Filtrar Favoritos -->
         <button type="button" id="FavoritesButton" class="btn btn-outline-secondary btn-sm">
             Mostrar Favoritos
+        </button>
+        
+        <!-- Botão de Mostrar Todos -->
+        <button type="button" id="AllButton" class="btn btn-outline-secondary btn-sm">
+            Mostrar Todos
         </button>
 
         <ol id="pokemonList" class="pokemons">

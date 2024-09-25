@@ -1,6 +1,7 @@
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 const favoritesButton = document.getElementById('FavoritesButton');
+const showAllButton = document.getElementById('AllButton');
 const searchInput = document.getElementById('searchInput');
 
 const maxRecords = 151;
@@ -28,8 +29,8 @@ function loadPokemonItens(offset, limit) {
   });
 }
 
+// Botao de carregar mais Pokémons
 loadPokemonItens(offset, limit);
-
 loadMoreButton.addEventListener('click', () => {
   offset += limit;
   const qtdRecordsWithNextPage = offset + limit;
@@ -129,6 +130,18 @@ function createPokemonListItem(pokemon) {
 // Event listener para exibir apenas os Pokémon favoritados
 favoritesButton.addEventListener('click', () => {
   showFavoritePokemons();
+  showAllButton.disabled = false;
+  loadMoreButton.disabled = true;
+});
+
+// Event listener para exibir todos os Pokémon
+showAllButton.addEventListener('click', () => {
+  offset = 0; 
+  loadPokemonItens(offset, limit, true);
+  
+  showAllButton.disabled = true;
+  loadMoreButton.disabled = false;
+
 });
 
 // Modal para Pokémon

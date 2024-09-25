@@ -1,4 +1,4 @@
-const modalPokemon = document.querySelector('.modalOpen')
+modalPokemon = document.querySelector('.modalOpen')
 let buttonClose = null;
 
 
